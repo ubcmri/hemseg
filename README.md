@@ -1,5 +1,5 @@
 # hemseg
-Semi-automated MATLAB pipeline for Otsu-based segmentation of hemorrhage in spinal cord MRI
+Semi-automated MATLAB pipeline for Otsu-based segmentation of intra-parenchymal hemorrhage (IPH) in spinal cord MRI
 ---
 
 ## Overview
