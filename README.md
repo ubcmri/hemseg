@@ -24,17 +24,16 @@ This workflow was tested with the following experimental conditions:
 
 
 The required software to implement this workflow includes:
-- **3D Slicer** ([download.slicer.org](download.slicer.org):  used to define the initial spinal cord mask and to calculate the surface area/volume on the final hemorrhage segmentation.  Tested with v. 4.11
+- **3D Slicer** ([download.slicer.org](download.slicer.org):  used to define the initial spinal cord mask and to calculate the surface area/volume on the final hemorrhage segmentation.  Tested with v5.2.2
 - **MATLAB** ([mathworks.com](www.mathworks.com)):  used to generate the automatic Otsu thresholds and provide the user interface for the manual selection of the classmap patches to include in the hemorrhage segmentation.  Tested with MATLAB 2024b.
 
 The workflow assumes that all data is in the **NRRD** format, which is the native image file format for 3D Slicer. DICOM files can easily be loaded by 3D Slicer using the DICOM module, and then subsequently saved to NRRD format through Slicer's Save module.
 
 ## Usage
 
-The program files in the `code` directory should be downloaded to your computer and be added to the MATLAB path (as described [here](https://www.mathworks.com/help/matlab/matlab_env/add-remove-or-reorder-folders-on-the-search-path.html)).  There are three main MATLAB scripts that should be modified and run as needed:
+The program files in the `code` directory should be downloaded to your computer and be added to the MATLAB path (as described [here](https://www.mathworks.com/help/matlab/matlab_env/add-remove-or-reorder-folders-on-the-search-path.html)).  There are two main MATLAB scripts that should be modified and run as needed:
 
 - `Otsu_segmentation_fileinfo.m`:  specifies the setup/configuration info for each experimental session (names of image/mask files, number of Otsu thresholds, etc.) and saves this information to a data file (`Otsu_hem_fileinfo.mat`)
-- `Otsu_segmentation_cordmask_from_FSE_script.m`:  take a mask image file (manually defined in 3D Slicer) and produce a cropped version of the input image, showing only the segmented cord
 - `Otsu_segmentation_hemorrhage_mask_script.m`: generates the Otsu-derived segmentation classmap, and presents the user with an interactive interface to select the classmap patches that will be included in the hemorrhage segmentation.
 
 Customizing these scripts for your project will mostly involve setting the input and output data paths at the top of each MATLAB script file, and entering the configuration information in `Otsu_segmentation_fileinfo.m` for each experimental dataset.
