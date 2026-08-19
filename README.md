@@ -2,6 +2,7 @@
 Semi-automated MATLAB pipeline for Otsu-based segmentation of intra-parenchymal hemorrhage (IPH) in spinal cord MRI
 ---
 
+
 ## Overview
 
 This code repository represents a data analysis workflow to segment areas of hemorrhage from MRI volumes.  The approach is semi-automated in the following way:
@@ -11,6 +12,12 @@ This code repository represents a data analysis workflow to segment areas of hem
 - **Interactive selection of hemorrhage areas in the classmap**:  an interactive user interface is used to **manually** select individual patches in the segmentation classmap (usually considered to be areas of abnormal hypointensity).
 
 In this way, the user can exercise their own subjective judgement about what patches in the classmap to include, but has no choice about the shape or distribution of the classmap itself.
+
+
+<figure>
+  <img src="pipeline_overview.png" alt="Pipeline Overview">
+  <figcaption>Overview of hemorrhage segmentation analysis pipeline</figcaption>
+</figure>
 
 ## Assumptions and Required Software
 
@@ -40,7 +47,4 @@ Customizing these scripts for your project will mostly involve setting the input
 
 The instructions for executing this workflow is detailed in this [document](hemseg_guide.pdf).
 
-<figure>
-  <img src="pipeline_overview.png" alt="Pipeline Overview">
-  <figcaption>Overview of hemorrhage segmentation analysis pipeline</figcaption>
-</figure>
+
