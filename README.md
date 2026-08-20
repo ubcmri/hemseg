@@ -47,4 +47,7 @@ Customizing these scripts for your project will mostly involve setting the input
 
 The instructions for executing this workflow is detailed in this [document](hemseg_guide.pdf).
 
+## Support and feedback
+
+Contact aysha@icord.org or ayung@mail.ubc.ca if you have questions.
 
